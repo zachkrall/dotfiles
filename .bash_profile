@@ -6,11 +6,8 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # add bin directory for current user
-PATH=$PATH:$HOME/bin:$HOME/.composer/vendor/bin
+PATH=$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$PATH
 export PATH
 
-# customized prompt 
-PS1="\[\e[37m\]\u \[\e[34m\]\w\[\e[37m\] → \[\e[m\]"
+PS1="\[\033[G\]\n\t in \w ⚡️ $(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)% \n\[\033[1;32m\]→ \[\033[0m\]"
 export PS1
-
-export PATH="$HOME/.cargo/bin:$PATH"

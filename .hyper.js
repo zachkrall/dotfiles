@@ -5,31 +5,31 @@ module.exports = {
   config: {
     updateChannel: 'stable',
 
-		// Text Styling
-		fontSize: 13.5,
+    // Text Styling
+    fontSize: 13.5,
     fontFamily: '"DejaVu Sans Mono for Powerline", monospace',
     foregroundColor: '#abb2bf',
 
-		// Cursor Options
+    // Cursor Options
     cursorColor: 'rgba(255,255,255,0.8)',
     cursorShape: 'BEAM', // BEAM, UNDERLINE, or BLOCK
     cursorBlink: true,
 
-		// Window Options
+    // Window Options
     backgroundColor: 'rgba(40, 44, 52, 0.85)',
     borderColor: '#333',
     padding: '0px 14px 12px 14px',
     
-		// Custom CSS
-		css: '',
+    // Custom CSS
+    css: '',
     termCSS: '',
 
-		// Ignored on macOS
+    // Ignored on macOS
     showHamburgerMenu: '',
     showWindowControls: '',
     
-		// Color Palette
-		colors: {
+    // Color Palette
+    colors: {
       black: '#282c34',
       red: '#e26b73',
       green: '#96c475',
@@ -48,23 +48,23 @@ module.exports = {
       lightWhite: '#abb2bf'
     },
 
-		// Shell Behavior
-		shell: '',
+    // Shell Behavior
+    shell: '',
     shellArgs: ['--login'],
-		env: {},
+    env: {},
     
-		bell: 'SOUND', // SOUND or false
+    bell: 'SOUND', // SOUND or false
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
     
-		copyOnSelect: false
+    copyOnSelect: false
 
   },
 
   plugins: [ 'hyper-statusline',
-	           'hyper-quit',
-		         'hyperterm-clicky',
-		         'hyperterm-copy'],
+	     'hyper-quit',
+             'hyperterm-clicky',
+             'hyperterm-copy'],
 
   localPlugins: [],
 

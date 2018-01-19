@@ -16,18 +16,30 @@ module.exports = {
     cursorBlink: true,
 
     // Window Options
-    backgroundColor: 'rgba(40, 44, 52, 0.85)',
-    borderColor: '#333',
+    backgroundColor: '#282c34',
+    borderColor: '#343943',
     padding: '0px 14px 12px 14px',
-    
+
     // Custom CSS
-    css: '',
+    css: `
+    .tabs_nav .tabs_list .tab_text {
+      color: #abb2bf;
+      border-color:#abb2bf;
+    }
+    .tabs_nav .tabs_title {
+      color: #abb2bf;
+    }
+    footer.footer_footer,
+    footer.footer_footer *{
+      opacity:1.0;
+    }
+    `,
     termCSS: '',
 
     // Ignored on macOS
     showHamburgerMenu: '',
     showWindowControls: '',
-    
+
     // Color Palette
     colors: {
       black: '#282c34',
@@ -52,11 +64,11 @@ module.exports = {
     shell: '',
     shellArgs: ['--login'],
     env: {},
-    
+
     bell: 'SOUND', // SOUND or false
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
-    
+
     copyOnSelect: false
 
   },

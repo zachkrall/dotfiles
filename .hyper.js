@@ -73,10 +73,7 @@ module.exports = {
 
   },
 
-  plugins: [ 'hyper-statusline',
-	     'hyper-quit',
-             'hyperterm-clicky',
-             'hyperterm-copy'],
+  plugins: [ 'hyper-statusline','hyper-quit','hyperterm-clicky','hyperterm-copy'],
 
   localPlugins: [],
 

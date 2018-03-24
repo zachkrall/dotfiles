@@ -42,7 +42,7 @@ module.exports = {
 
     // Color Palette
     colors: {
-      black: '#282c34',
+      black: '#4f5868',
       red: '#e26b73',
       green: '#96c475',
       yellow: '#56ac7b',

@@ -45,4 +45,5 @@ function quit() {
 
 }
 alias config='/usr/bin/git --git-dir=/Users/zachkrall/.dotfiles/ --work-tree=/Users/zachkrall'
-alias c=clear
+alias c='clear'
+alias home='cd $HOME'

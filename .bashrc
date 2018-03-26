@@ -1,49 +1,51 @@
 # .bashrc
 
 
-# source global definitions
+# Find global definitions
 if [ -f /etc/bashrc ]; then
 	      . /etc/bashrc
 fi
 
 
+# User defined aliases
 
-# user specific aliases
+alias ls='ls -hpG'         # Default List
+alias la='ls -alhpG'       # Show hidden files
 
-alias ls='ls -hpG'            # Default List
-alias ll='exa -T'            # Use EXA to show directory tree
-alias la='ls -alhpG'          # Show hidden files
+alias xx='exa -alhHU --color=auto --git --group-directories-first'
+                           # Deafult EXA preferences
+alias xt='exa -T'          # Use EXA to show directory tree
+alias xs='exa --sort size' # Sort EXA by file size
 
-alias exa='exa -alhHU --color=auto --git --group-directories-first'
-alias xs='exa --sort size'
+alias mkdir='mkdir -pv'    # Creates immediate directories as required
 
-alias mkdir='mkdir -p'        # Easier mkdir
+# alias rm='rm -i'         # Ask before deleting
+alias cp='cp -i'           # Ask before copying
+alias mv='mv -i'           # Ask before moving
 
-# alias rm='rm -i'              # Ask before deleting
-alias cp='cp -i'              # Ask before copying
-alias mv='mv -i'              # Ask before moving
+alias c='clear'
+alias home='cd $HOME'
+
+# use config for version controlled dot files
+alias config='/usr/bin/git --git-dir=/Users/zachkrall/.dotfiles/ --work-tree=/Users/zachkrall'
 
 
 
-# Find a file with a pattern in name:
+# User defined functions
 
-function ff() { 
-    find $HOME -type f -iname '*'"$*"'*' -ls ;
+function search() {
+  # easier way to find files
+  find $HOME -type f -iname '*'"$*"'*' -ls ;
 }
 
-# ls after changing into directory
-
 function cs() {
-  cd $1
-	ls
+  # cd into directory and then immediately ls
+  cd $1 && ls
 }
 
 function quit() {
-
+  # quit an application matching the name
   osascript -e 'quit app "'$1'"'
   printf 'quit '$1'\n'
 
 }
-alias config='/usr/bin/git --git-dir=/Users/zachkrall/.dotfiles/ --work-tree=/Users/zachkrall'
-alias c='clear'
-alias home='cd $HOME'

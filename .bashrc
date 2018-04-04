@@ -27,7 +27,7 @@ alias c='clear'
 alias home='cd $HOME'
 
 # use config for version controlled dot files
-alias config='/usr/bin/git --git-dir=/Users/zachkrall/.dotfiles/ --work-tree=/Users/zachkrall'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 
 

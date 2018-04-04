@@ -49,3 +49,8 @@ function quit() {
   printf 'quit '$1'\n'
 
 }
+
+function edit() {
+	# open file in atom
+	open $1 -a atom.app
+}

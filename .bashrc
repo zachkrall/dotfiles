@@ -54,3 +54,10 @@ function edit() {
 	# open file in atom
 	open $1 -a atom.app
 }
+
+function photorec() {
+	~/testdisk-7.0/photorec
+}
+function testdisk(){
+	~/testdisk-7.0/testdisk
+}

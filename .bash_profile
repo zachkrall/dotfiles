@@ -20,7 +20,7 @@ fi
 
 
 # Customize PATH
-PATH=$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$PATH
+PATH=$HOME/bin:/usr/local/Cellar/python/3.6.5:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$PATH
 export PATH
 
 

@@ -10,6 +10,7 @@ fi
 # User defined aliases
 
 alias ls='ls -hpG'         # Default List
+alias ll='ls -lp'          # Long List
 alias la='ls -alhpG'       # Show hidden files
 
 alias xx='exa -alhHU --color=auto --git --group-directories-first'

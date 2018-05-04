@@ -20,12 +20,12 @@ fi
 
 
 # Customize PATH
-PATH=$HOME/bin:/usr/local/Cellar/python/3.6.5:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$PATH
+PATH=$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$PATH
 export PATH
 
 
 # Customize CD PATH
-CDPATH=:$HOME/Dev:$HOME/Sites:$HOME/Dev/ofx_v0.9.8/apps/myApps
+CDPATH=:$HOME/Code:$HOME/Sites:$HOME/Code/ofx/apps/myApps
 export CDPATH
 
 

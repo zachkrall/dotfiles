@@ -1,0 +1,50 @@
+[user]
+	name = Zach Krall
+	email = zach@zachkrall.com
+
+
+[credential]
+	helper = osxkeychain
+
+
+[color]
+	ui = auto
+
+
+[alias]
+	
+	a = add --all
+	b = branch
+	bd = branch -D
+	c = commit
+	cm = commit -m
+	clo = clone
+	f = fetch
+	fo = fetch origin
+	fu = fetch upstream
+	l = log --oneline
+	logs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	ls = ls-files
+	co = checkout
+	switch = checkout
+	p = push
+	pl = pull
+	r = remote
+	ra = remote add
+	s = status
+
+
+[color "branch"]
+	current = green bold ul
+	local = blue
+	remote = yellow
+
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+
+
+[push]
+	default = current

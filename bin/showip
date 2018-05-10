@@ -2,6 +2,6 @@
 # for when I am curious about my IP address
 
 printf "Local IP address:  "
-ipconfig getifaddr en1
+ipconfig getifaddr en0
 printf "Public IP address: "
 dig +short myip.opendns.com @resolver1.opendns.com

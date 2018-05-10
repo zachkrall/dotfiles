@@ -56,6 +56,13 @@ function edit() {
 	open $1 -a atom.app
 }
 
+function sync() {
+
+	browser-sync start $1 -f $2
+	open http://localhost:3000
+
+}
+
 function photorec() {
 	~/testdisk-7.0/photorec
 }

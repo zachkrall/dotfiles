@@ -8,7 +8,6 @@ set scrolloff=4
 " line numbers
 set number
 set numberwidth=3
-highlight LineNr cterm=none ctermfg=233
 
 " search
 set hlsearch
@@ -17,7 +16,7 @@ set ignorecase
 set smartcase
 
 set nocompatible
-syntax on
+syntax on 
 filetype on
 filetype plugin on
 

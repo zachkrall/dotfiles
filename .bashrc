@@ -27,6 +27,8 @@ alias mv='mv -i'           # Ask before moving
 alias c='clear'
 alias home='cd $HOME'
 
+alias http='http-server -c-1'
+
 # use config for version controlled dot files
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 

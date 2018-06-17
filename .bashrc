@@ -27,7 +27,7 @@ alias mv='mv -i'           # Ask before moving
 alias c='clear'
 alias home='cd $HOME'
 
-alias http='http-server -c-1'
+# alias http='http-server -c-1'
 
 # use config for version controlled dot files
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -51,6 +51,11 @@ function quit() {
   osascript -e 'quit app "'$1'"'
   printf 'quit '$1'\n'
 
+}
+
+function http() {
+	open http://localhost:8080
+	http-server -c-1 $1
 }
 
 function edit() {

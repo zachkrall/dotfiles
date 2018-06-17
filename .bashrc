@@ -58,6 +58,10 @@ function http() {
 	http-server -c-1 $1
 }
 
+function livehttp() {
+  browser-sync start --server -f .
+}
+
 function edit() {
 	# open file in atom
 	open $1 -a atom.app

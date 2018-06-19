@@ -62,16 +62,15 @@ function livehttp() {
   browser-sync start --server -f .
 }
 
+function fastpush() {
+	git add .
+	git commit -am $1
+	git push origin master
+}
+
 function edit() {
 	# open file in atom
 	open $1 -a atom.app
-}
-
-function sync() {
-
-	browser-sync start $1 -f $2
-	open http://localhost:3000
-
 }
 
 function photorec() {

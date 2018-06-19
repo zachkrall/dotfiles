@@ -20,7 +20,7 @@ fi
 
 
 # Customize PATH
-PATH=$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$PATH
+PATH=$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$PATH:$HOME/.gem/ruby/2.3.0/bin
 export PATH
 
 

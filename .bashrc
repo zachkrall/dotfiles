@@ -74,8 +74,8 @@ function edit() {
 }
 
 function photorec() {
-	~/testdisk-7.0/photorec
+	$HOME/testdisk-7.0/photorec
 }
 function testdisk(){
-	~/testdisk-7.0/testdisk
+	$HOME/testdisk-7.0/testdisk
 }

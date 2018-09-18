@@ -27,6 +27,8 @@ alias mv='mv -i'           # Ask before moving
 alias c='clear'
 alias home='cd $HOME'
 
+alias ofx='cd /Users/zach/Code/of_v0.9.8_osx_release/apps && ls'
+
 # alias http='http-server -c-1'
 
 # use config for version controlled dot files

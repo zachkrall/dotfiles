@@ -8,15 +8,15 @@ fi
 
 
 # rainbow greeting
-if [[ $(gem list | grep lolcat | cut -c-6) = *lolcat* ]]; then
-	if [[ $USER = zach ]]; then
-		echo Hello, Zach! | lolcat
-	else
-		echo Hello, $USER | lolcat
-	fi
-else
-	printf 'Consider running `gem install lolcat` for a fun welcome message\n'
-fi
+# if [[ $(gem list | grep lolcat | cut -c-6) = *lolcat* ]]; then
+# if [[ $USER = zach ]]; then
+#		echo Hello, Zach! | lolcat
+#	else
+#		echo Hello, $USER | lolcat
+#	fi
+# else
+#	 printf 'Consider running `gem install lolcat` for a fun welcome message\n'
+# fi
 
 
 # Customize PATH

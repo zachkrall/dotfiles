@@ -1,27 +1,39 @@
 #!/bin/bash
-# template for new HTML projects
 
-echo '<!DOCTYPE html>
+# -----------------------------
+#  tool for quickly creating
+#  a static HTML website
+#  inside the current working
+#  directory
+# -----------------------------
+
+# Ask for project title
+read -p 'Project Title: ' TITLE
+
+# Write html into index.html
+echo "<!DOCTYPE html>
 <html>
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta charset=\"utf-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,shrink-to-fit=no\">
 
-    <title>Title</title>
+    <title>$TITLE</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <script type="text/javascript" src="js/app.js"></script>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\">
 
 </head>
 <body>
 
+  <h1>$TITLE</h1>
+
+<script type=\"text/javascript\" src=\"js/app.js\"></script>
 </body>
-</html>' > index.html
+</html>" > index.html
 
 mkdir {css,img,js}
 
 touch css/style.css
 touch js/app.js
+
+exa -T

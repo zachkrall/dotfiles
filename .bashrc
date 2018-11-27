@@ -20,6 +20,8 @@ alias xs='exa --sort size' # Sort EXA by file size
 
 alias mkdir='mkdir -pv'    # Creates immediate directories as required
 
+alias runrun='make RunRelease'
+
 # alias rm='rm -i'         # Ask before deleting
 alias cp='cp -i'           # Ask before copying
 alias mv='mv -i'           # Ask before moving
@@ -27,7 +29,7 @@ alias mv='mv -i'           # Ask before moving
 alias c='clear'
 alias home='cd $HOME'
 
-alias ofx='cd /Users/zach/Code/openFrameworks/apps && ls'
+alias ofx='cd /Users/zach/Code/openFrameworks/kralz920_ofDT_2018 && ls'
 
 # alias http='http-server -c-1'
 

@@ -20,6 +20,7 @@ alias xs='exa --sort size' # Sort EXA by file size
 
 alias mkdir='mkdir -pv'    # Creates immediate directories as required
 
+# C++ Development
 alias runrun='make RunRelease'
 
 # alias rm='rm -i'         # Ask before deleting
@@ -32,6 +33,8 @@ alias home='cd $HOME'
 alias ofx='cd /Users/zach/Code/openFrameworks/kralz920_ofDT_2018 && ls'
 
 # alias http='http-server -c-1'
+
+alias music='open -a iTunes.app'
 
 # use config for version controlled dot files
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

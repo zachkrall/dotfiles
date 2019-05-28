@@ -16,11 +16,13 @@
  */
 
  /* Custom Hydra Styles */
-body.hydra-enabled{
+body.hydra-enabled,
+body.veda-enabled{
   div.line span{
-    background:rgba(0,0,0,0.0)!important;
+    background:rgba(0,0,0,0.9)!important;
     color:#fff!important;
-    text-shadow: rgba(0,0,0,0.5) 1px 1px 3px;
+    font-weight:normal!important;
+    text-shadow: rgba(0,0,0,0) 0px 0px 1px;
   }
   .line-number{
     color:#fff;
@@ -34,8 +36,9 @@ html, body,
 .tree-view, .tab-bar .tab,
 .title-bar, .panels,
 .status-bar{
-  font-family: -apple-system, "Helvetica Neue", sans-serif!important;
-  letter-spacing: 0.2pt;
+  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif!important;
+  font-size: 14px;
+  letter-spacing: 0.1pt;
 }
 
 /* fix framer syntax bold colors */
@@ -47,12 +50,11 @@ html, body,
   vertical-align: middle;
 }
 .btn::before{
-  position:relative;
-  top:1.5pt;
+  margin-top:-3px;
 }
 
 span.icon{
-  margin-right: 0.4em;
+  margin-right: 0.2em;
 }
 
 // style the background color of the tree view
@@ -64,6 +66,7 @@ span.icon{
 atom-text-editor {
   // color: white;
   // background-color: hsl(180, 24%, 12%);
+  font-weight: 500;
 }
 
 // style UI elements inside atom-text-editor

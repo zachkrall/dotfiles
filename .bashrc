@@ -16,6 +16,7 @@ alias la='ls -alhpG'       # Show hidden files
 alias xx='exa -alhHU --color=auto --git --group-directories-first'
                            # Deafult EXA preferences
 alias xt='exa -T'          # Use EXA to show directory tree
+alias xl='exa -al'         # Use EXA to list files one line each
 alias xs='exa --sort size' # Sort EXA by file size
 
 alias mkdir='mkdir -pv'    # Creates immediate directories as required
@@ -36,12 +37,16 @@ alias ofx='cd /Users/zach/Code/openFrameworks/kralz920_ofDT_2018 && ls'
 
 alias music='open -a iTunes.app'
 
+
 # use config for version controlled dot files
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 
 
 # User defined functions
+function rainbow(){
+	echo $1 | lolcat
+}
 
 function search() {
   # easier way to find files
@@ -66,7 +71,13 @@ function http() {
 }
 
 function livehttp() {
-  browser-sync start --server -f .
+	if [ $1 ]
+	then
+		printf "browser-sync start --server $1 --files $1\n"
+		browser-sync start --server $1 --files $1
+	else
+		browser-sync start --server -f .
+	fi
 }
 
 function fastpush() {
@@ -80,9 +91,22 @@ function edit() {
 	open $1 -a atom.app
 }
 
+function opentidal () {
+	open -a supercollider.app
+	open $HOME/Code/tidal/code -a atom.app
+}
+
 function photorec() {
 	$HOME/testdisk-7.0/photorec
 }
 function testdisk(){
 	$HOME/testdisk-7.0/testdisk
+}
+
+function quicksay (){
+	say $1 -o $1.aiff
+}
+
+function toiletfonts(){
+	for i in $(ls /usr/local/Cellar/toilet/0.3/share/figlet); do toilet --font ${i/.tlf} ${i/.tlf}; done
 }

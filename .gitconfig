@@ -1,12 +1,3 @@
-[user]
-	name = Zach Krall
-	email = zach@zachkrall.com
-
-
-[credential]
-	helper = osxkeychain
-
-
 [color]
 	ui = auto
 
@@ -48,3 +39,8 @@
 
 [push]
 	default = current
+[user]
+	name = Zach Krall
+	email = zach@zachkrall.com
+[core]
+	sshCommand = ssh -i /Users/zach/.ssh/personal.github -o IdentitiesOnly=yes -F /dev/null

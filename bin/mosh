@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ffmpeg -i $1 ${1%.*}.avi
+datamosh ${1%.*}.avi -o ${1%.*}_effect.avi
+ffmpeg -i ${1%.*}_effect.avi ${1%.*}_result.mp4

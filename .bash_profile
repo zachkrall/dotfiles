@@ -30,6 +30,7 @@ export CDPATH
 #PS1="\n\[\e[0;90m\][\t] \[\e[0;0m\]\w \[\e[0;36m\]$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)% \n\[\e[0;32m\]→ \[\e[0m\]"
 PS1="\[\e[0;90m\][\t] \[\e[0;0m\]\w \n\[\e[0m\]› "
 export PS1
+
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi

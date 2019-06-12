@@ -9,7 +9,7 @@ fi
 
 # User defined aliases
 
-alias ls='ls -hpG'         # Default List
+alias ls='ls -hp'         # Default List
 alias ll='ls -lp'          # Long List
 alias la='ls -alhpG'       # Show hidden files
 
@@ -36,6 +36,8 @@ alias ofx='cd /Users/zach/Code/openFrameworks/kralz920_ofDT_2018 && ls'
 # alias http='http-server -c-1'
 
 alias music='open -a iTunes.app'
+
+alias lt="toilet"
 
 
 # use config for version controlled dot files

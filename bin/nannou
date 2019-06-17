@@ -14,6 +14,11 @@ function nannouhelp () {
  echo "    update               Updates Cargo.toml with all sketches in folder"
 }
 
+if [ -z $1 ]; then
+	nannouhelp
+
+else
+
 if [ $1 = "run" ]; then
 
 	if [ -z $2 ]; then
@@ -53,8 +58,6 @@ done)
 
   cat Cargo.toml	
 
-else
-
-	nannouhelp
+fi
 
 fi

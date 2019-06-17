@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Short cut for running sketches
+# `nannou run sketch`
+
+function nannouhelp () {
+ echo "Zach's custom nannou cli"
+ echo " "
+ echo "USAGE:"
+ echo "    nannou [COMMAND]"
+ echo " "
+ echo "COMMANDS:"
+ echo "    run [SKETCHNAME]     Builds and runs a sketch"
+ echo "    update               Updates Cargo.toml with all sketches in folder"
+}
+
+if [ $1 = "run" ]; then
+
+	if [ -z $2 ]; then
+		echo "Please provide the name of a sketch"
+	else
+	  cargo run -p ${2} --release
+  fi
+
+elif [ $1 = "update" ]; then
+	
+	echo " "
+	echo "Updating Cargo.toml ..."
+	echo " "
+
+	# Gather all directories
+
+	DIRS=($(ls -d */))
+ 
+	# Generate new Cargo.toml
+
+ 	echo "[workspace]
+
+members = [	
+$(for i in ${DIRS[@]}; do
+if [ $i = "target/" ]
+then
+	:
+else
+	echo "    \"${i%/*}\","
+fi
+done)
+]" > Cargo.toml
+
+  # Print new Cargo.toml so that
+  # it's easy to ensure everything
+  # was generated correctly
+
+  cat Cargo.toml	
+
+else
+
+	nannouhelp
+
+fi

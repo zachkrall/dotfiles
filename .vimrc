@@ -1,3 +1,6 @@
+" mouse interactions
+set mouse=a
+
 " display
 set ruler
 set wrap

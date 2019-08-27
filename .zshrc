@@ -188,7 +188,7 @@ function fastpush() {
 
 function edit() {
 	# open file in atom
-	open $1 -a atom.app
+	open $1 -a "visual studio code.app"
 }
 
 function opentidal () {

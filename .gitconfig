@@ -1,3 +1,6 @@
+[core]
+  pager = less -FRX
+
 [color]
 	ui = auto
 

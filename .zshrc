@@ -16,6 +16,7 @@ export ZSH="/Users/zach/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="nox"
+#ZSH_THEME="evan"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # User defined aliases
 
-alias ls='ls -hp'         # Default List
+alias ls='ls -p'         # Default List
 alias ll='ls -lp'          # Long List
 alias la='ls -alhpG'       # Show hidden files
 

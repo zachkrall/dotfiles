@@ -114,7 +114,7 @@ alias la='ls -alhpG'       # Show hidden files
 
 alias xx='exa -alhHU --color=auto --git --group-directories-first'
                            # Deafult EXA preferences
-alias xt='exa -T'          # Use EXA to show directory tree
+alias xt='exa -T -L 2'          # Use EXA to show directory tree
 alias xl='exa -al'         # Use EXA to list files one line each
 alias xs='exa --sort size' # Sort EXA by file size
 
@@ -189,7 +189,7 @@ function fastpush() {
 
 function edit() {
 	# open file in atom
-	open $1 -a "visual studio code.app"
+	open $1 -a "atom.app"
 }
 
 function opentidal () {

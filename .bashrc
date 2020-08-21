@@ -90,7 +90,7 @@ function fastpush() {
 
 function edit() {
 	# open file in atom
-	open $1 -a atom.app
+	open $1 -a "Visual Studio Code.app"
 }
 
 function opentidal () {
@@ -112,3 +112,10 @@ function quicksay (){
 function toiletfonts(){
 	for i in $(ls /usr/local/Cellar/toilet/0.3/share/figlet); do toilet --font ${i/.tlf} ${i/.tlf}; done
 }
+
+# added by travis gem
+[ ! -s /Users/zach/.travis/travis.sh ] || source /Users/zach/.travis/travis.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

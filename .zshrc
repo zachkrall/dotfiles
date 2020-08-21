@@ -4,7 +4,9 @@
 # --- my path ---
 PATH=/usr/local/bin:$HOME/bin:$PATH
 PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/.composer/vendor/bin
 PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
+PATH=$PATH:$HOME/.deno/bin
 export PATH
 
 # Path to your oh-my-zsh installation.
@@ -14,9 +16,7 @@ export ZSH="/Users/zach/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="nox"
-#ZSH_THEME="evan"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -138,6 +138,8 @@ alias music='open -a iTunes.app'
 
 alias lt="toilet"
 
+alias notebook="jupyter lab"
+
 
 # use config for version controlled dot files
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -152,6 +154,14 @@ function rainbow(){
 function search() {
   # easier way to find files
   find $HOME -type f -iname '*'"$*"'*' -ls ;
+}
+
+function findstring(){
+  grep -rnw $1 -e $2
+}
+
+function searchall(){
+  find / -type f -iname '*'"$*"'*' -ls;
 }
 
 function cs() {
@@ -189,7 +199,7 @@ function fastpush() {
 
 function edit() {
 	# open file in atom
-	open $1 -a "atom.app"
+	open $1 -a "Visual Studio Code.app"
 }
 
 function opentidal () {
@@ -211,3 +221,34 @@ function quicksay (){
 function toiletfonts(){
 	for i in $(ls /usr/local/Cellar/toilet/0.3/share/figlet); do toilet --font ${i/.tlf} ${i/.tlf}; done
 }
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+
+# added by travis gem
+[ ! -s /Users/zach/.travis/travis.sh ] || source /Users/zach/.travis/travis.sh
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# this loads local version each time we enter a directory
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
